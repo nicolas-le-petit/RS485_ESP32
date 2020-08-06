@@ -86,7 +86,7 @@ void Config_SSID_Password(const char* ssid, const char* password){
   //Storage data into EEPROM
   Write_EEPROM(WIFI_SSID_ADDRESS, incomming_ssid.length(), ssid);
 
-  /* #ifdef 0
+  /* #if 0
     Serial.println("Wifi SSID has been storaged in EEPROM!");
     String load_ssid = Read_EEPROM(WIFI_SSID_ADDRESS, WIFI_SSID_BUFFER_MAX);
     Serial.println(load_ssid);
@@ -94,7 +94,7 @@ void Config_SSID_Password(const char* ssid, const char* password){
 
   Write_EEPROM(WIFI_PASSWORD_ADDRESS, incomming_password.length(), password);
   
-  /* #ifdef 0
+  /* #if 0
     Serial.println("Wifi password has been storaged in EEPROM!");
     String load_password = Read_EEPROM(WIFI_PASSWORD_ADDRESS, WIFI_PW_BUFFER_MAX);
     Serial.println(load_password);

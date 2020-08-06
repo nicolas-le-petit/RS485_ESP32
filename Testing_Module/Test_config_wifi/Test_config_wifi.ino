@@ -38,6 +38,7 @@ void setup()
   EEPROM.begin(EEPROM_SIZE);
   delay(500);
 
+  LCD_init();
   // Bluetooth_Init();
 
   /* String ssid = Read_EEPROM(WIFI_SSID_ADDRESS, WIFI_SSID_BUFFER_MAX);

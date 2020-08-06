@@ -18,6 +18,7 @@
 #define RS485_PIN_DE 32//control pin RS485, HIGH to transmit - LOW to receive
 #define RS485_Transmit() digitalWrite(RS485_PIN_DE, HIGH)
 #define RS485_Receive() digitalWrite(RS485_PIN_DE, LOW)
+#define RS485_BUFFER 20
 
 #define TX2_PIN 17
 #define RX2_PIN 16
@@ -28,4 +29,4 @@ void RS485_Send_Data_by_Byte(byte SlaveID, byte Fcode, byte len, const byte* dat
 void RS485_Write_by_String(uint8_t channel, String data_frame);
 String RS485_Read_by_String(uint8_t channel);
 void RS485_Init(int baud_rate, byte config);
-unsigned short crc16(const byte* data_p, byte len, unsigned short polynomial);
+unsigned short CRC16(const byte* buf, int len);

@@ -10,6 +10,7 @@
 #include "Storage.h"
 #include "WiFi_handle.h"
 #include "Bluetooth_handle.h"
+#include "LCD_handle.h"
 #include "string.h"
 
 void Log_Menu_cmd();

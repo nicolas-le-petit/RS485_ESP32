@@ -17,7 +17,7 @@ String cmd_menu[] = {
     "1.1, Read EEPROM",
     "1.2, Write EEPROM",
     "2.1, Check Wifi connect",
-    "3.1, Check BL connect",
+    "3.1, Check LCD",
 };
 
 void Log_Menu_cmd(){
@@ -55,6 +55,10 @@ void Check_Storage(){
                 Config_SSID_Password(user_ssid, user_password);
             }
             Wifi_Connect(user_ssid, user_password);
+        }
+
+        else if (cmd == "3.1"){
+            LCD_Print_Data_from_Serial();
         }
     }
 }
