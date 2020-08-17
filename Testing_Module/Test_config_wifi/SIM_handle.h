@@ -48,8 +48,8 @@ class SIM_Buffer{
 };
 
 void SIM_Send_cmd(String cmd);
-void SIM_Send_Data_GPRS(String data);
-void SIM_Send_Data_SMS(String data);
-void SIM_Shutdown();
-void SIM_Send2Get_GPS();
-void SIM_Get_Respond(String &outStr);
+String SIM_Ping();
+String SIM_Send_Data_GPRS(String data);
+String SIM_Send_Data_SMS(String data);
+String SIM_Shutdown();
+String SIM_Send2Get_GPS();

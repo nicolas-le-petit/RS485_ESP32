@@ -25,7 +25,15 @@
 
 #define RS485_Serial Serial2
 
-void RS485_Send_Data_by_Byte(byte SlaveID, byte Fcode, byte len, const byte* data);
+typedef struct{
+    byte _SlaveID;
+    byte _Fcode;
+    byte _Datalen;
+    byte* _Data;
+    byte* _CRC16;
+} Modbus_Frame;
+
+void RS485_Send_Data_by_Byte(byte SlaveID, byte Fcode, byte len, byte* data);
 void RS485_Write_by_String(uint8_t channel, String data_frame);
 String RS485_Read_by_String(uint8_t channel);
 void RS485_Init(int baud_rate, byte config);

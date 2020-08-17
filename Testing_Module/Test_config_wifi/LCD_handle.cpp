@@ -1,3 +1,13 @@
+/* 
+Date  : 05/08/2020
+Author: DungTT
+To control LCD.
+Including: 
+Check LCD address & init
+Creat special char
+
+ */
+
 #include "LCD_handle.h"
 
 LiquidCrystal_I2C lcd(LCD_ADDR, LCD_COL, LCD_ROW);
@@ -12,17 +22,6 @@ byte Check_I2C_Address(byte address){
 }
 
 void LCD_init(){
-    /* if (Check_I2C_Address(LCD_ADDR) == 0){
-        Serial.println("LCD is ready!");
-        lcd.init();
-        // turn on LCD backlight                      
-        lcd.backlight();
-        // set cursor to first column, first row
-        lcd.setCursor(0, 0);
-        // print message
-        lcd.print("Hello, World!");
-    }
-    return; */
     
     lcd.init();
     // turn on LCD backlight                      

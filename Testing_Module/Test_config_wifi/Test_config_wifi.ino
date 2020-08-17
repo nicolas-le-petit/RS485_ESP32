@@ -1,19 +1,7 @@
 /**
-  SPI
-  MOSI 23  13
-  MISO 19  12
-  CLK  18  14
-  CS   5   15
+  RS485
+  LCD
 
-  Strapping Pins
-  The ESP32 chip has the following strapping pins:
-
-  GPIO 0
-  GPIO 2
-  GPIO 4
-  GPIO 5 (must be HIGH during boot)
-  GPIO 12 (must be LOW during boot)
-  GPIO 15 (must be HIGH during boot)
 */
 
 #define _DEBUG_ 4
@@ -67,9 +55,9 @@ void setup()
 
 void loop()
 {
-  Log_Menu_cmd();
+  Check_Log();
   while (!Serial.available());
-  Unit_Test_cmd();
+  Check_Log();
 }
 
 /*------------------------------WIFI HANDLE---------------------------*/

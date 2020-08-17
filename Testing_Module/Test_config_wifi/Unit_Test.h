@@ -12,6 +12,6 @@
 #include "Bluetooth_handle.h"
 #include "LCD_handle.h"
 #include "string.h"
+#include "RS485_handle.h"
 
-void Log_Menu_cmd();
-void Unit_Test_cmd();
+void Check_Log();
